@@ -1,6 +1,5 @@
 package com.example.selfexpressbackend.payload.response;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
