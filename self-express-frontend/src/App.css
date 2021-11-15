@@ -40,3 +40,9 @@
     height: 100vh;
   }
 }
+
+@media (min-width: 993px) {
+  .center {
+    position: relative;
+  }
+}

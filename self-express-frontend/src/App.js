@@ -39,19 +39,27 @@ class App extends Component {
       <div>
         <Container className="p-0 background-image" fluid>
           <MyNavbar />
-          {!this.state.showLoginForm && !this.state.showRegisterForm && (
-            <WelcomeMessage
-              showLoginFormHandler={this.showLoginFormHandler}
-              showRegisterFormHandler={this.showRegisterFormHandler}
-            />
-          )}
-          {this.state.showLoginForm && !this.state.showRegisterForm && (
-            <Login showRegisterFormHandler={this.showRegisterFormHandler} />
-          )}
-          {this.state.showRegisterForm && !this.state.showLoginForm && (
-            <Register showLoginFormHandler={this.showLoginFormHandler} />
-          )}
-          {/* </Container> */}
+          <Container>
+            <Row>
+              <Col>1 of 2 </Col>
+              <Col>
+                {!this.state.showLoginForm && !this.state.showRegisterForm && (
+                  <WelcomeMessage
+                    showLoginFormHandler={this.showLoginFormHandler}
+                    showRegisterFormHandler={this.showRegisterFormHandler}
+                  />
+                )}
+                {this.state.showLoginForm && !this.state.showRegisterForm && (
+                  <Login
+                    showRegisterFormHandler={this.showRegisterFormHandler}
+                  />
+                )}
+                {this.state.showRegisterForm && !this.state.showLoginForm && (
+                  <Register showLoginFormHandler={this.showLoginFormHandler} />
+                )}
+              </Col>
+            </Row>
+          </Container>
         </Container>
       </div>
     );
